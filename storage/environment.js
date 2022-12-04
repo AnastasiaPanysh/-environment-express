@@ -1,4 +1,4 @@
-let db = [{
+let DB = [{
     "id": "javascript",
     "label": "JavaScript",
     "category": "programmingLanguages",
@@ -78,24 +78,4 @@ let db = [{
 },
 ];
 
-function getEnvironments (){
-    return db
-}
-
-function getEnvironmentsByID (id){
-    let filteredDB = db.filter(el=> el.id===id)
-    return filteredDB
-}
-
-function putEnvironments (id){
-    const newElement = { "id": "ptypescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 }
-    let filteredDB = db.filter(el=> el.id!==id)
-    if(filteredDB.length) db.push(newElement)  
-    return db
-}
-
-
-
-module.exports={
-    getEnvironments, getEnvironmentsByID,putEnvironments
-}
+module.exports = DB;
